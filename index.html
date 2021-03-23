@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>Impiegati</title>
 </head>
 <body onload="start()">
-    <h1>Elenco impiegati</h1><input type="button" value="add employee" onclick="aggiungi()">
+    <h1>Elenco impiegati</h1><input type="button" value="add employee" onclick="vedi(true)">
+    <div id="aggiungi" style="display:none">
+        <p><label>Nome:     </label><input type="text" name="" id="nome"></p>
+        <p><label>Cognome:  </label><input type="text" name="" id="cognome"></p>
+        <p><label>Email:    </label><input type="email" name="" id="email"></p>
+        <p><label>Telefono: </label><input type="text" name="" id="telefono"></p>
+        <input type="button" id="conferma" value="Conferma" onclick="inserimento()"><br>
+    </div>
     <p id="response"></p>
     <table id="tabella">
         <tr>
